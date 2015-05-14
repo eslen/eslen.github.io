@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -16,19 +16,19 @@
 		<!--
 			var config = {
 				width: 960, 
-				height: 600,
+				height: 720,
 				params: { enableDebugging:"0" }
 				
 			};
 			var u = new UnityObject2(config);
-
+			
 			jQuery(function() {
 
 				var $missingScreen = jQuery("#unityPlayer").find(".missing");
 				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
 				$missingScreen.hide();
 				$brokenScreen.hide();
-				
+
 				u.observeProgress(function (progress) {
 					switch(progress.pluginStatus) {
 						case "broken":
@@ -56,7 +56,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "pokemon_Gotta_catch.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], "pokemonGottaCatchEmAll.unity3d");
 			});
 		-->
 		</script>
@@ -64,15 +64,15 @@
 		<!--
 		body {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
-			background-color: white;
-			color: black;
+			background-color: grey;
+			color: white;
 			text-align: center;
 		}
 		a:link, a:visited {
-			color: #000;
+			color: #bfbfbf;
 		}
 		a:active, a:hover {
-			color: #666;
+			color: #bfbfbf;
 		}
 		p.header {
 			font-size: small;
@@ -109,14 +109,14 @@
 		}
 		div#unityPlayer {
 			cursor: default;
-			height: 600px;
+			height: 720px;
 			width: 960px;
 		}
 		-->
 		</style>
 	</head>
 	<body>
-		<p class="header"><span>Unity Web Player | </span>unityGame_1</p>
+		<h1>Pokémon: Gotta Catch 'Em All</h1>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -124,13 +124,8 @@
 						<img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
 					</a>
 				</div>
-				<div class="broken">
-					<a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
-						<img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
-					</a>
-				</div>
 			</div>
 		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<p>Catch as many pokémon as possible. You must get 30 points or higher to win!</p>
 	</body>
 </html>
